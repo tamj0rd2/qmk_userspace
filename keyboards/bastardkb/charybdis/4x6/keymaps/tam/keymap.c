@@ -22,6 +22,7 @@
 
 enum charybdis_keymap_layers {
     LAYER_BASE = 0,
+    LAYER_FOCAL,
     LAYER_LOWER,
     LAYER_RAISE,
     LAYER_POINTER,
@@ -68,6 +69,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                    KC_LGUI, KC_SPC,   LOWER,      RAISE,  KC_ENT,
                                            KC_LALT, KC_BSPC,     KC_DEL
+  //                            ╰───────────────────────────╯ ╰──────────────────╯
+  ),
+
+  [LAYER_FOCAL] = LAYOUT(
+  // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+       KC_TRNS,   KC_V,    KC_L,    KC_H,    KC_G,    KC_K,       KC_Q,    KC_F,    KC_O,    KC_U,    KC_J,  KC_TRNS,
+  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+       KC_TRNS,   KC_S,    KC_S,    KC_N,    KC_T,    KC_B,       KC_Y,    KC_C,    KC_A,    KC_E,    KC_I,  KC_TRNS,
+  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+       KC_TRNS,   KC_Z,    KC_X,    KC_M,    KC_D,    KC_P, ,   KC_QUOT,   KC_W,   KC_DOT, KC_SCLN, KC_COMM, KC_TRNS,
+  // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
+                                  KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,
+                                           KC_TRNS, KC_TRNS,    KC_TRNS
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 

@@ -77,16 +77,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_FOCAL] = LAYOUT(
   // ╭───────────────────────────────────────────────────────────────────────╮    ╭──────────────────────────────────────────────────────────────────────────╮
-       KC_TRANS,    KC_TRANS,     KC_TRANS,     KC_TRANS,     KC_TRANS, KC_TRANS,  KC_TRANS,  KC_TRANS,     KC_TRANS,     KC_TRANS,     KC_TRANS,   KC_TRANS,
+       KC_TRNS,    KC_TRNS,     KC_TRNS,     KC_TRNS,     KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,     KC_TRNS,     KC_TRNS,     KC_TRNS,   KC_TRNS,
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
-       KC_TRANS,     UK_V,         UK_L,         UK_H,         UK_G,      UK_K,    UK_Q,        UK_F,         UK_O,         UK_U,         UK_J,     KC_TRANS,
+       KC_TRNS,     UK_V,         UK_L,         UK_H,         UK_G,      UK_K,    UK_Q,        UK_F,         UK_O,         UK_U,         UK_J,     KC_TRNS,
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
-       KC_TRANS, LCTL_T(UK_S), LALT_T(UK_R), LGUI_T(UK_N), LSFT_T(UK_T),  UK_B,    UK_Y,    RSFT_T(UK_C), RGUI_T(UK_A), LALT_T(UK_E), RCTL_T(UK_I), KC_TRANS,
+       KC_TRNS, LCTL_T(UK_S), LALT_T(UK_R), LGUI_T(UK_N), LSFT_T(UK_T),  UK_B,    UK_Y,    RSFT_T(UK_C), RGUI_T(UK_A), LALT_T(UK_E), RCTL_T(UK_I), KC_TRNS,
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
-       KC_TRANS,     PT_Z,         UK_X,         UK_M,         UK_D,      UK_P,    UK_QUOT,     UK_W,        UK_COMM,      UK_DOT,       PT_SLSH,   UK_SCLN,
+       KC_TRNS,     PT_Z,         UK_X,         UK_M,         UK_D,      UK_P,    UK_QUOT,     UK_W,        UK_COMM,      UK_DOT,       PT_SLSH,   UK_SCLN,
   // ╰───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────╯
-                                   KC_TRANS, KC_TRANS, KC_TRANS,                     KC_TRANS, KC_TRANS,
-                                             KC_TRANS, KC_TRANS,                     KC_TRANS
+                                   KC_TRNS, KC_TRNS, KC_TRNS,                     KC_TRNS, KC_TRNS,
+                                             KC_TRNS, KC_TRNS,                     KC_TRNS
   //                            ╰────────────────────────────────────────────╯    ╰────────────────────────────────╯
   ),
 
@@ -100,8 +100,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,       KC_N,    KC_M, UK_COMM,  UK_DOT, UK_SLSH, KC_RCTL,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                   KC_TRANS, KC_TRANS, KC_TRANS,      KC_TRANS,  KC_TRANS,
-                                           KC_TRANS, KC_TRANS,     KC_TRANS
+                                   KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,  KC_TRNS,
+                                           KC_TRNS, KC_TRNS,     KC_TRNS
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 

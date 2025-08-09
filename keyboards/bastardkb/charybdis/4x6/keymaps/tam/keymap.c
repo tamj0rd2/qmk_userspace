@@ -16,6 +16,8 @@
  */
 #include QMK_KEYBOARD_H
 
+#include "keymap_uk.h"
+
 #ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 #    include "timer.h"
 #endif // CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE

@@ -68,10 +68,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
        XXXXXXX, LCTL_T(UK_A), LALT_T(UK_S), LGUI_T(UK_D), LSFT_T(UK_F), UK_G,    UK_H, RSFT_T(UK_J), RGUI_T(UK_K), LALT_T(UK_L), RCTL_T(UK_SCLN), UK_QUOT,
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
-       KC_LCTL,        PT_Z,         UK_X,         UK_C,         UK_V,  UK_B,    UK_N,        UK_M,         UK_COMM,      UK_DOT,       PT_SLSH,  KC_RCTL,
+       XXXXXXX,        PT_Z,         UK_X,         UK_C,         UK_V,  UK_B,    UK_N,        UK_M,         UK_COMM,      UK_DOT,       PT_SLSH,  XXXXXXX,
   // ╰───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────╯
-                      LT(LAYER_SYM, KC_BSPC), LT(LAYER_NAV, KC_ENT), KC_LGUI,    KC_LALT,  LT(LAYER_SYM, KC_SPC),
-                                                      KC_LALT,       XXXXXXX,    KC_RGUI
+                      LT(LAYER_SYM, KC_BSPC), LT(LAYER_NAV, KC_ENT), KC_LGUI,    XXXXXXX,  LT(LAYER_SYM, KC_SPC),
+                                                      XXXXXXX,       XXXXXXX,    XXXXXXX
   //          ╰──────────────────────────────────────────────────────────────╯ ╰────────────────────────────────╯
   ),
 

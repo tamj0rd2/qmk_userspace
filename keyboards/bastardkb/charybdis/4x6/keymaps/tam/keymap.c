@@ -18,8 +18,6 @@
 
 #include "keymap_uk.h"
 
-#include "sm_td.h"
-
 #ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 #    include "timer.h"
 #endif // CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
@@ -68,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
        KC_TAB,         UK_Q,         UK_W,         UK_E,         UK_R,  UK_T,    UK_Y,        UK_U,         UK_I,         UK_O,         UK_P,     UK_MINS,
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
-       XXXXXXX, UK_A, UK_S, UK_D, UK_F, UK_G,                                    UK_H, UK_J, UK_K, UK_L, UK_SCLN, UK_QUOT,
+       XXXXXXX, LCTL_T(UK_A), LALT_T(UK_S), LGUI_T(UK_D), LSFT_T(UK_F), UK_G,    UK_H, RSFT_T(UK_J), RGUI_T(UK_K), LALT_T(UK_L), RCTL_T(UK_SCLN), UK_QUOT,
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
        KC_LCTL,        PT_Z,         UK_X,         UK_C,         UK_V,  UK_B,    UK_N,        UK_M,         UK_COMM,      UK_DOT,       PT_SLSH,  KC_RCTL,
   // ╰───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────╯
@@ -83,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
        KC_TRNS,     UK_V,         UK_L,         UK_H,         UK_G,      UK_K,    UK_Q,        UK_F,         UK_O,         UK_U,         UK_J,     KC_TRNS,
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
-       KC_TRNS, UK_S, UK_R, UK_N, UK_T,  UK_B,                                     UK_Y,    UK_C, UK_A, UK_E, UK_I, KC_TRNS,
+       KC_TRNS, LCTL_T(UK_S), LALT_T(UK_R), LGUI_T(UK_N), LSFT_T(UK_T),  UK_B,    UK_Y,    RSFT_T(UK_C), RGUI_T(UK_A), LALT_T(UK_E), RCTL_T(UK_I), KC_TRNS,
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
        KC_TRNS,     PT_Z,         UK_X,         UK_M,         UK_D,      UK_P,    UK_QUOT,     UK_W,        UK_COMM,      UK_DOT,       PT_SLSH,   UK_SCLN,
   // ╰───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────╯
@@ -193,46 +191,3 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 // Forward-declare this helper function since it is defined in rgb_matrix.c.
 void rgb_matrix_update_pwm_buffers(void);
 #endif
-
-/*https://github.com/stasmarkin/sm_td?tab=readme-ov-file#installation*/
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (!process_smtd(keycode, record)) {
-        return false;
-    }
-
-    // your code here
-
-    return true;
-}
-
-smtd_resolution on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
-    uint8_t current_layer = get_highest_layer(layer_state);
-
-    if (current_layer == LAYER_BASE) {
-        switch (keycode) {
-            SMTD_MT(UK_A, KC_LEFT_CTRL)
-            SMTD_MT(UK_S, KC_LEFT_ALT)
-            SMTD_MT(UK_D, KC_LEFT_GUI)
-            SMTD_MT(UK_F, KC_LSFT)
-            SMTD_MT(UK_SCLN, KC_RIGHT_CTRL)
-            SMTD_MT(UK_L, KC_RIGHT_ALT)
-            SMTD_MT(UK_K, KC_RIGHT_GUI)
-            SMTD_MT(UK_J, KC_RSFT)
-        }
-    }
-
-    if (current_layer == LAYER_FOCAL) {
-        switch (keycode) {
-            SMTD_MT(UK_S, KC_LEFT_CTRL)
-            SMTD_MT(UK_R, KC_LEFT_ALT)
-            SMTD_MT(UK_N, KC_LEFT_GUI)
-            SMTD_MT(UK_T, KC_LSFT)
-            SMTD_MT(UK_I, KC_RIGHT_CTRL)
-            SMTD_MT(UK_E, KC_RIGHT_ALT)
-            SMTD_MT(UK_A, KC_RIGHT_GUI)
-            SMTD_MT(UK_C, KC_RSFT)
-        }
-    }
-
-    return SMTD_RESOLUTION_UNHANDLED;
-}

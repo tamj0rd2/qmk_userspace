@@ -126,12 +126,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────┤
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,     A(KC_LEFT), KC_UP, A(KC_RIGHT), XXXXXXX,      XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  LCSG(KC_LEFT), KC_LEFT, KC_DOWN, KC_RIGHT, LCSG(KC_RIGHT),  XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  LCSG(KC_LEFT), KC_LEFT, KC_DOWN, KC_RIGHT, LCSG(KC_RIGHT),  XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,   XXXXXXX,    G(KC_LEFT), XXXXXXX, G(KC_RIGHT), XXXXXXX,     XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX,    G(KC_LEFT), XXXXXXX, G(KC_RIGHT), XXXXXXX,     XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────╯
-                                  XXXXXXX, XXXXXXX, KC_TRANS,    KC_TRANS, XXXXXXX,
-                                           KC_TRANS, KC_TRANS,    KC_TRANS
+                                  XXXXXXX, XXXXXXX, KC_TRNS,    KC_TRNS, XXXXXXX,
+                                           KC_TRNS, KC_TRNS,    KC_TRNS
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 

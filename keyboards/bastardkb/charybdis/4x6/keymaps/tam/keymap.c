@@ -111,9 +111,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        XXXXXXX, XXXXXXX, XXXXXXX, UK_LBRC, UK_RBRC, XXXXXXX,  S(UK_BSLS), UK_LCBR, UK_RCBR, UK_TILD, UK_ASTR, UK_UNDS,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,               UK_AMPR, UK_LPRN, UK_RPRN, UK_QUES, UK_COLN,  UK_DLR
+       KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,               UK_AMPR, UK_LPRN, UK_RPRN, UK_QUES, UK_COLN,  UK_DLR,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,            UK_GRV,   KC_PEQL, UK_EXLM, UK_DQUO, UK_BSLS,  UK_PLUS,
+       KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,            UK_GRV,   KC_PEQL, UK_EXLM, UK_DQUO, UK_BSLS, UK_PLUS,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                   XXXXXXX, XXXXXXX, KC_TRNS,    KC_TRNS, XXXXXXX,
                                            KC_TRNS, KC_TRNS,      KC_TRNS

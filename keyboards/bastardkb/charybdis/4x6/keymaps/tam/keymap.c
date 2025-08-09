@@ -191,3 +191,12 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 // Forward-declare this helper function since it is defined in rgb_matrix.c.
 void rgb_matrix_update_pwm_buffers(void);
 #endif
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    uint8_t current_layer = get_highest_layer(layer_state);
+
+    if (current_layer == LAYER_FOCAL) {
+        return TAPPING_TERM + 100; // Increase by 100ms (adjust as needed)
+    }
+    return TAPPING_TERM;
+}

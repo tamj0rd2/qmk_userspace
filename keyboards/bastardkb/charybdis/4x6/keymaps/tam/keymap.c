@@ -113,7 +113,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, UK_LBRC, UK_RBRC, XXXXXXX,  S(UK_BSLS), UK_LCBR, UK_RCBR, UK_TILD, UK_ASTR, UK_UNDS,
+       XXXXXXX, XXXXXXX, UK_LBRC, UK_RBRC, UK_DQUO, XXXXXXX,   S(UK_BSLS), UK_LCBR, UK_RCBR, UK_TILD, UK_ASTR, UK_UNDS,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,               UK_AMPR, UK_LPRN, UK_RPRN, UK_QUES, UK_COLN,  UK_DLR,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤

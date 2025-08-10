@@ -60,7 +60,7 @@ static uint16_t auto_pointer_layer_timer = 0;
 
 #define THUMB_BSPC LT(LAYER_SYM, KC_BSPC)
 #define THUMB_ENT LT(LAYER_NAV, KC_ENT)
-#define THUMB_SPC LT(LAYER_NAV, KC_SPC)
+#define THUMB_SPC LT(LAYER_SYM, KC_SPC)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {

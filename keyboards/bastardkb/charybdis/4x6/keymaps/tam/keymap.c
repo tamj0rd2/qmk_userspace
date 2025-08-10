@@ -58,6 +58,10 @@ static uint16_t auto_pointer_layer_timer = 0;
 #    define SNIPING KC_NO
 #endif // !POINTING_DEVICE_ENABLE
 
+#define THUMB_BSPC LT(LAYER_SYM, KC_BSPC)
+#define THUMB_ENT LT(LAYER_NAV, KC_ENT)
+#define THUMB_SPC LT(LAYER_NAV, KC_SPC)
+
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT(
@@ -70,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
        XXXXXXX,        PT_Z,         UK_X,         UK_C,         UK_V,  UK_B,    UK_N,        UK_M,         UK_COMM,      UK_DOT,       PT_SLSH,  XXXXXXX,
   // ╰───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────╯
-                      LT(LAYER_SYM, KC_BSPC), LT(LAYER_NAV, KC_ENT), KC_LGUI,    XXXXXXX,  LT(LAYER_SYM, KC_SPC),
+                                              THUMB_BSPC, THUMB_ENT, KC_LGUI,    XXXXXXX,  THUMB_SPC,
                                                       XXXXXXX,       XXXXXXX,    XXXXXXX
   //          ╰──────────────────────────────────────────────────────────────╯ ╰────────────────────────────────╯
   ),
@@ -199,6 +203,16 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         return TAPPING_TERM + 150; // Increase by 100ms (adjust as needed)
     }
     return TAPPING_TERM;
+}
+
+uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case THUMB_BSPC:
+        case THUMB_SPC:
+            return QUICK_TAP_TERM;
+        default:
+            return 0;
+    }
 }
 
 const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =

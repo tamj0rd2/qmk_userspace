@@ -61,6 +61,8 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define THUMB_BSPC LT(LAYER_SYM, KC_BSPC)
 #define THUMB_ENT LT(LAYER_NAV, KC_ENT)
 #define THUMB_SPC LT(LAYER_SYM, KC_SPC)
+#define NAV_E LT(LAYER_NAV, KC_E)
+#define NAV_H LT(LAYER_NAV, KC_H)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -68,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭───────────────────────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────────────────────────╮
        KC_ESC,         UK_1,         UK_2,         UK_3,         UK_4,  UK_5,    UK_6,        UK_7,         UK_8,         UK_9,         UK_0,     UK_GRV,
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
-       KC_TAB,         UK_Q,         UK_W,         UK_E,         UK_R,  UK_T,    UK_Y,        UK_U,         UK_I,         UK_O,         UK_P,     UK_MINS,
+       KC_TAB,         UK_Q,         UK_W,        NAV_E,         UK_R,  UK_T,    UK_Y,        UK_U,         UK_I,         UK_O,         UK_P,     UK_MINS,
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
        XXXXXXX, LCTL_T(UK_A), LALT_T(UK_S), LGUI_T(UK_D), LSFT_T(UK_F), UK_G,    UK_H, RSFT_T(UK_J), RGUI_T(UK_K), LALT_T(UK_L), RCTL_T(UK_SCLN), UK_QUOT,
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
@@ -83,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭───────────────────────────────────────────────────────────────────────╮    ╭──────────────────────────────────────────────────────────────────────────╮
        KC_TRNS,    KC_TRNS,     KC_TRNS,     KC_TRNS,     KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,     KC_TRNS,     KC_TRNS,     KC_TRNS,   KC_TRNS,
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
-       KC_TRNS,     UK_V,         UK_L,         UK_H,         UK_G,      UK_K,    UK_Q,        UK_F,         UK_O,         UK_U,         UK_J,     KC_TRNS,
+       KC_TRNS,     UK_V,         UK_L,        NAV_H,         UK_G,      UK_K,    UK_Q,        UK_F,         UK_O,         UK_U,         UK_J,     KC_TRNS,
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
        KC_TRNS, LCTL_T(UK_S), LALT_T(UK_R), LGUI_T(UK_N), LSFT_T(UK_T),  UK_B,    UK_Y,    RSFT_T(UK_C), RGUI_T(UK_A), LALT_T(UK_E), RCTL_T(UK_I), KC_TRNS,
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
@@ -200,7 +202,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     uint8_t current_layer = get_highest_layer(layer_state);
 
     if (current_layer == LAYER_FOCAL) {
-        return TAPPING_TERM + 150; // Increase by 100ms (adjust as needed)
+        return TAPPING_TERM + 150;
     }
     return TAPPING_TERM;
 }

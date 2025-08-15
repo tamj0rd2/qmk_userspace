@@ -88,8 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
        KC_TRNS,     UK_V,         UK_L,        NAV_H,         UK_G,      UK_K,    UK_Q,        UK_F,         UK_O,         UK_U,         UK_J,     KC_TRNS,
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
-     //KC_TRNS, LCTL_T(UK_S), LALT_T(UK_R), LGUI_T(UK_N), LSFT_T(UK_T),  UK_B,    UK_Y,    RSFT_T(UK_C), RGUI_T(UK_A), LALT_T(UK_E), RCTL_T(UK_I), KC_TRNS,
-       KC_TRNS,     UK_S,         UK_R,         UK_N,         UK_T,      UK_B,    UK_Y,        UK_C,        UK_A,         UK_E,         UK_I,      KC_TRNS,
+       KC_TRNS, LCTL_T(UK_S), LALT_T(UK_R), LGUI_T(UK_N), LSFT_T(UK_T),  UK_B,    UK_Y,    RSFT_T(UK_C), RGUI_T(UK_A), LALT_T(UK_E), RCTL_T(UK_I), KC_TRNS,
   // ├───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────┤
        KC_TRNS,     PT_Z,         UK_X,         UK_M,         UK_D,      UK_P,    UK_QUOT,     UK_W,        UK_COMM,      UK_DOT,       PT_SLSH,   UK_SCLN,
   // ╰───────────────────────────────────────────────────────────────────────┤    ├──────────────────────────────────────────────────────────────────────────╯

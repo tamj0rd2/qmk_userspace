@@ -63,6 +63,7 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define THUMB_SPC LT(LAYER_SYM, KC_SPC)
 #define NAV_E LT(LAYER_NAV, KC_E)
 #define NAV_H LT(LAYER_NAV, KC_H)
+#define HYPER C(S(G(KC_LALT)))
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -76,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
        XXXXXXX,        PT_Z,         UK_X,         UK_C,         UK_V,  UK_B,    UK_N,        UK_M,         UK_COMM,      UK_DOT,       PT_SLSH,  XXXXXXX,
   // ╰───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────╯
-                                              THUMB_BSPC, THUMB_ENT, KC_LGUI,    XXXXXXX,  THUMB_SPC,
+                                              THUMB_BSPC, THUMB_ENT, HYPER,    HYPER,  THUMB_SPC,
                                                       XXXXXXX,       XXXXXXX,    XXXXXXX
   //          ╰──────────────────────────────────────────────────────────────╯ ╰────────────────────────────────╯
   ),

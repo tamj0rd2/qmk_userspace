@@ -203,7 +203,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     uint8_t current_layer = get_highest_layer(layer_state);
 
     if (current_layer == LAYER_FOCAL) {
-        return TAPPING_TERM + 270;
+        return TAPPING_TERM + 300;
     }
     return TAPPING_TERM;
 }

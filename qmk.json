@@ -1,6 +1,7 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["bastardkb/charybdis/4x6", "tam"]
+        ["bastardkb/charybdis/4x6", "tam"],
+        ["lily58", "tam"]
     ]
 }

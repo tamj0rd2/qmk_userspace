@@ -2,7 +2,7 @@
 
 #ifdef VIA_ENABLE
 /* VIA configuration. */
-#    define DYNAMIC_KEYMAP_LAYER_COUNT 3
+#    define DYNAMIC_KEYMAP_LAYER_COUNT 4
 #endif // VIA_ENABLE
 
 #define TAPPING_TERM 180

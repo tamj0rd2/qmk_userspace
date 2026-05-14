@@ -63,7 +63,6 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define THUMB_SPC LT(LAYER_SYM, KC_SPC)
 #define NAV_E LT(LAYER_NAV, KC_E)
 #define NAV_H LT(LAYER_NAV, KC_H)
-#define HYPER C(S(G(KC_LALT)))
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -75,9 +74,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
        XXXXXXX, LCTL_T(UK_A), LALT_T(UK_S), LGUI_T(UK_D), LSFT_T(UK_F), UK_G,    UK_H, RSFT_T(UK_J), RGUI_T(UK_K), LALT_T(UK_L), RCTL_T(UK_SCLN), UK_QUOT,
   // ├───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────┤
-       XXXXXXX,        PT_Z,         UK_X,         UK_C,         UK_V,  UK_B,    UK_N,        UK_M,         UK_COMM,      UK_DOT,       PT_SLSH,  XXXXXXX,
+       OS_HYPR,          PT_Z,         UK_X,         UK_C,         UK_V,  UK_B,    UK_N,        UK_M,         UK_COMM,      UK_DOT,       PT_SLSH,  OS_HYPR,
   // ╰───────────────────────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────────────╯
-                                              THUMB_BSPC, THUMB_ENT, HYPER,    HYPER,  THUMB_SPC,
+                                              THUMB_BSPC, THUMB_ENT, XXXXXXX,    XXXXXXX,  THUMB_SPC,
                                                       XXXXXXX,       XXXXXXX,    XXXXXXX
   //          ╰──────────────────────────────────────────────────────────────╯ ╰────────────────────────────────╯
   ),
@@ -107,8 +106,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_B,    KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_V,       KC_N,    KC_M, UK_COMM,  UK_DOT, UK_SLSH, TG(2),
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                   KC_BSPC, KC_SPC, KC_ENT,      KC_TRNS,  KC_SPC,
-                                           KC_TRNS, KC_TRNS,     KC_TRNS
+                                   KC_BSPC, KC_SPC, KC_ENT,      KC_LALT,  KC_SPC,
+                                           KC_LALT, KC_TRNS,     KC_TRNS
   //                            ╰───────────────────────────╯ ╰──────────────────╯
   ),
 
@@ -116,7 +115,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX, UK_LBRC, UK_RBRC, UK_DQUO, XXXXXXX,   S(UK_BSLS), UK_LCBR, UK_RCBR, UK_TILD, UK_ASTR, UK_UNDS,
+       XXXXXXX, KC_BSLS, UK_LBRC, UK_RBRC, UK_DQUO, XXXXXXX,   S(UK_BSLS), UK_LCBR, UK_RCBR, UK_TILD, UK_ASTR, UK_UNDS,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6,               UK_AMPR, UK_LPRN, UK_RPRN, UK_QUES, UK_COLN,  UK_DLR,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
@@ -133,7 +132,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────┤
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,     A(KC_LEFT), KC_UP, A(KC_RIGHT), XXXXXXX,      XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────┤
-       XXXXXXX, KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, XXXXXXX,  C(S(G(KC_LEFT))), KC_LEFT, KC_DOWN, KC_RIGHT, C(S(G(KC_RIGHT))),  XXXXXXX,
+       XXXXXXX, KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, XXXXXXX,  C(S(G(KC_RIGHT))), KC_LEFT, KC_DOWN, KC_RIGHT, C(S(G(KC_LEFT))),  XXXXXXX,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────┤
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX,    G(KC_LEFT), XXXXXXX, G(KC_RIGHT), XXXXXXX,     XXXXXXX,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────────────────╯

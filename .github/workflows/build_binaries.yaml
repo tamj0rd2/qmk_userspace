@@ -1,6 +1,12 @@
 name: Build QMK firmware
 
-on: [push, workflow_dispatch]
+"on":
+  push:
+    branches:
+      - main
+    paths:
+      - keyboards/bastardkb**
+  workflow_dispatch: {}
 
 permissions:
   contents: write

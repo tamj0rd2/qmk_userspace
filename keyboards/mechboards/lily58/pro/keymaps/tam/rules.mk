@@ -1,2 +1,0 @@
-VIA_ENABLE = yes
-SENCODER_MAP_ENABLE = yes
